@@ -320,7 +320,7 @@
             </div>
 
           </div>
-          </div>
+          <!--</div> unexpectd div-->
         </aside>
         <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
           <!-- Header Search Bar -->
@@ -353,7 +353,9 @@
             Please only change what you need to from here down
           -->
           <!-- Page Title & Breadcrumbs -->
-          <div class="row m-3 mt-4 ms-5">
+          <div class="container py-3 my-3">
+          <div class="row">
+            <div class="col-12">
 
             <ol class="px-0 pt-1 pb-0 mb-1 bg-transparent breadcrumb me-sm-6 me-5 text-black opacity-7">
               <li class="text-sm breadcrumb-item" >
@@ -361,8 +363,8 @@
               </li>
             </ol>
 
-            <h4>Change Permissions on 'Home' folder </h4>
-
+            <h4 class="mb-3">Change Permissions on 'Home' folder </h4>
+          </div> 
           </div>
           <!-- End Page title and Breadcrumbs -->
 
@@ -371,21 +373,22 @@
           <form method="POST">
             <input type="hidden" name="csrfmiddlewaretoken" value="HIlaM8LKrPQUw1u3JrMPfddeuWqenIwyPaDkWH9pxh1sT8amoB1QTAfuqRhqJgMd">
             <div class="bg-gray-100 main-content position-relative max-height-vh-100 h-100">
-              <div class="container py-3 my-3">
-                <div class="row mt-3">
+            
+                <div class="row">
                   <div class="col-12">
                     <div class="card border shadow-xs h-100">
-                      <div class="card-header pb-0 p-3">
-
-                        <p>
-                        <i>
+                      <div class="card-body">
+                        <div class="alert alert-info text-white fw-light" role="alert">
+                          <i class="far fa-user-circle me-2"></i> 
                           Giving a user access to this folder will give them
                           this access to all contracts and all sub-folders within this folder
-                        </i>
-                        </p>
-                        <h6 class="mb-0 font-weight-semibold text-lg">Owner permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will have complete access to the <i>Home </i>folder.</p>
-                        <div class="py-4">
+                        </div>
+
+                        <h5 class="card-title font-weight-semibold text-lg"><i class="fas fa-user-cog me-2 text-sm"></i> Owner permissions</h5>
+                        <h6 class="card-subtitle text-sm text-muted mb-1">Users added to this list
+                           will have complete 
+                        access to the <i>Home </i>folder.</h6>
+                        <div class="py-3">
                           <select name="owners" class="permission-select w-100" name="states[]" multiple="multiple">
 
                             <option value="1">john.smith@example.com</option>
@@ -402,9 +405,10 @@
                           </select>
                         </div>
 
-                        <h6 class="mb-0 font-weight-semibold text-lg">Editor permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will be able to read, update and delete this folder and its contents.</p>
-                        <div class="py-4">
+                        <h5 class="card-title font-weight-semibold text-lg"><i class="fas fa-pen-fancy me-2 text-sm"></i> Editor permissions</h5>
+                        <h6 class="card-subtitle text-sm text-muted mb-1">Users added to this 
+                          list will be able to read, update and delete this folder and its contents.</h6>
+                        <div class="py-3">
                           <select name="editors" class="permission-select w-100" name="states[]" multiple="multiple">
 
                             <option value="1">john.smith@example.com</option>
@@ -419,12 +423,13 @@
                             <option value="10">emily.williams@example.com</option>
 
                           </select>
-                          </select>
+                          <!--</select> error-->
                         </div>
 
-                        <h6 class="mb-0 font-weight-semibold text-lg">Reader permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will only be able to read this folder and its content.</p>
-                        <div class="py-4">
+                        <h5 class="card-title font-weight-semibold text-lg"><i class="fab fa-readme me-2 text-sm"></i> Reader permissions</h5>
+                        <h6 class="card-subtitle text-sm text-muted mb-1">Users added to this list
+                           will only be able to read this folder and its content.</h6>
+                        <div class="py-3">
                           <select name="readers" class="permission-select w-100" 
                                   name="states[]" multiple="multiple" allowClear="true">
 
@@ -442,17 +447,18 @@
                           </select>
                         </div>
 
-                        <div class="my-3 text-end">
-                          <button class="btn btn-primary">Save</button>
+                        <div class="text-end">
+                          <button class="btn btn-primary mb-0">Save</button>
                         </div>
                       </div>
 
                     </div>
                   </div>
                 </div>
-              </div>
+             
             </div>
           </form>
+        </div>
 
           <!-- 
             !! END !!
